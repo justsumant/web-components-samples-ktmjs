@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button {
+        margin: 10px;
+        border: none;
+        padding: 8px;
+        color: rgb(46, 46, 46);
+        cursor: pointer;
+        border: 1px solid lightcoral;
+      }
+      button:hover {
+        color: rgb(106, 106, 106);
+      }
+      .green {
+        background-color: lightgreen;
+      }
+      .blue {
+        background-color: lightblue;
+      }
+    </style>
+    <script type="module" src="./simpleCustomElement.js"></script>
+    <script type="module" src="./simpleCustomElementWithShadowDom.js"></script>
+    <script type="module" src="./shadowDomWithLifecycle.js"></script>
+    <script type="module" src="./extendedButton.js"></script>
+  </head>
+  <body>
+    <simple-custom-element></simple-custom-element>
+    <simple-custom-element-with-shadow-dom></simple-custom-element-with-shadow-dom>
+    <shadow-dom-with-lifecycle></shadow-dom-with-lifecycle>
+    <button onclick="handleButtonClick('lightgreen')" class="green">
+      Make it green
+    </button>
+    <button onclick="handleButtonClick('lightblue')" class="blue">
+      Make it blue
+    </button>
+
+    <div class="extended-button-container">
+      <button is="extended-button" onclick="handleButtonClick('lightcoral')">
+        Extended Button makes you coral
+      </button>
+    </div>
+
+    <script>
+      function handleButtonClick(color) {
+        const usersEl = document.querySelector("shadow-dom-with-lifecycle");
+        usersEl.setAttribute("background", color);
+      }
+    </script>
+  </body>
+</html>
