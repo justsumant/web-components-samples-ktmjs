@@ -102,3 +102,50 @@ dist
 
 # TernJS port file
 .tern-port
+
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# Compiled output
+angular-app/dist
+angular-app/tmp
+angular-app/out-tsc
+angular-app/bazel-out
+angular-app/cc-test-reporter
+
+# Node
+angular-app/node_modules
+angular-app/npm-debug.log
+angular-app/yarn-error.log
+
+# IDEs and editors
+angular-app/.idea/
+.project
+.classpath
+.c9/
+*.launch
+angular-app/.settings/
+*.sublime-workspace
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# Miscellaneous
+angular-app/.angular/cache
+angular-app/.sass-cache/
+angular-app/connect.lock
+angular-app/coverage
+angular-app/libpeerconnection.log
+angular-apptestem.log
+angular-app/typings
+
+# System files
+.DS_Store
+Thumbs.db
+
+# documentation
+angular-app/documentation

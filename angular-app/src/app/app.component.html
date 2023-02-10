@@ -1,0 +1,17 @@
+<!-- <simple-custom-element></simple-custom-element> -->
+<simple-custom-element-with-shadow-dom></simple-custom-element-with-shadow-dom>
+<shadow-dom-with-lifecycle></shadow-dom-with-lifecycle>
+<button (click)="handleButtonClick('lightgreen')" class="green">
+  Make it green
+</button>
+<button (click)="handleButtonClick('lightblue')" class="blue">
+  Make it blue
+</button>
+
+<div class="extended-button-container">
+  <button is="extended-button" (click)="handleButtonClick('lightcoral')">
+    Extended Button makes you coral
+  </button>
+</div>
+
+<users-list></users-list>
